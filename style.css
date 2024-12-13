@@ -131,7 +131,6 @@ main{
     gap: 52px;
 }
 .main-page > div{
-    width: fill(413.33px);
     display: flex;
     flex-direction: column;
     gap: 52px;
