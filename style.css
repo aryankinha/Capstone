@@ -7,8 +7,12 @@
 body {
     background-color: rgba(8, 2, 13, 1);
     color: rgba(223, 215, 228, 1);
+    padding: 0 2rem;
+    
 }
 
+
+/* Nav-bar */
 nav {
     width: 65%;
     padding: 1rem 0;
@@ -29,14 +33,20 @@ nav {
     padding: 0.5rem 1rem;
 }
 
-.nav-container a {
+.nav-container li a{
     text-decoration: none;
     color: rgba(223, 215, 228, 1);
+    position: relative;
+    top: 0.2em;
+    transition: all 0.5s ease;
+    border-bottom: 3px solid transparent;
 }
 
 .nav-logo {
     font-size: 2rem;
     margin: 0 auto;
+    position: relative;
+    right: 3%;
 }
 
 .nav-left {
@@ -44,9 +54,16 @@ nav {
     gap: 1.25rem;
 }
 
+header nav .nav-container li a:hover{
+    border-bottom: 3px solid rgb(137, 76, 175);
+}
+
+
+/* Main section */
+
 main {
     width: 100%;
-    margin: 1rem auto;
+    margin: 2rem auto;
 }
 
 .main-hero {
@@ -58,13 +75,18 @@ main {
     margin: 1rem auto;
 }
 
-.main-hero p {
+.main-hero p{
     font-size: 7.5rem;
     font-weight: 700;
     line-height: 7.5rem;
     text-align: center;
+    animation: font-change 5s ease-in;
+    /* transition: all 2s ease-in; */
 }
 
+/* .main-hero p:hover{
+    text-decoration: underline rgb(181, 148, 189);
+} */
 .hero img {
     width: 100%;
     height: auto;
@@ -137,7 +159,7 @@ main {
 
 .hero-footer {
     width: 100%;
-    height: auto;
+    height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Images/hero-footer.png');
     display: flex;
     flex-direction: column;
@@ -170,7 +192,6 @@ main {
     display: flex;
     gap: 0.5rem;
     border: none;
-    color: rgba(253, 250, 255, 1);
 }
 
 .main-email::placeholder {
